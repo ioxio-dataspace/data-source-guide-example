@@ -19,8 +19,6 @@ on:
   push:
     branches:
       - "main"
-      # TODO: Revert before merging
-      - "feature/deploy"
 
 name: Build and Deploy to Cloud Run
 env:
