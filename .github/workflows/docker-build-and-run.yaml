@@ -33,7 +33,7 @@ jobs:
 
       - name: Test API
         run: |
-          response=$(curl -i -H 'Content-Type: application/json' http://localhost:8000//Meteorology/Weather_v0.1 -d '{"lat":60.192059, "lon":24.945831}')
+          response=$(curl -i -H 'Content-Type: application/json' http://localhost:8000/Meteorology/Weather_v0.1 -d '{"lat":60.192059, "lon":24.945831}')
 
           status_code=$(echo "$response" | head -n 1 | awk '{print $2}')
 
