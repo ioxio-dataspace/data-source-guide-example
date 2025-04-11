@@ -1,5 +1,6 @@
-from fastapi import FastAPI, Request
 import random
+
+from fastapi import FastAPI, Request
 
 app = FastAPI()
 
