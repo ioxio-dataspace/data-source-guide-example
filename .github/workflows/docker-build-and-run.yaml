@@ -53,7 +53,7 @@ jobs:
           fi
 
           # Check if the response fields are present
-          if ! echo "$json_resp" | jq 'has("humidity") and has("pressure") and has ("rain") and has ("temp") and has ("windSpeed") and has ("windDirection") ' | grep -q true; then
+          if ! echo "$json_resp" | jq 'has("humidity") and has("pressure") and has ("temperature") and has ("precipitation") and has ("windSpeed") and has ("windDirection") and has ("visibility") ' | grep -q true; then
               echo "Error: Required fields not found in the JSON response."
               exit 1
           fi
