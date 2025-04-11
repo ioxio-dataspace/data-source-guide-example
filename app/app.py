@@ -13,6 +13,7 @@ async def get_weather(request: Request):
     # Extract lat, lon, and when (if provided)
     lat = body.get("lat")
     lon = body.get("lon")
+    when = body.get("when")  # noqa: F841
 
     if lat is None or lon is None:
         return {"detail": "lat and lon are required."}
