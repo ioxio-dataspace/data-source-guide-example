@@ -2,7 +2,7 @@
 
 FROM ghcr.io/ioxiocom/python-base:ubuntu22.04-python3.11 AS build
 
-WORKDIR /src/demo-integration
+WORKDIR /src/data-source-guide-example
 
 ADD docker/build-prepare.sh /src/docker/build-prepare.sh
 RUN bash /src/docker/build-prepare.sh
@@ -18,7 +18,7 @@ FROM ghcr.io/ioxiocom/python-base:ubuntu22.04-python3.11 AS runtime
 
 COPY --from=build ${WORKON_HOME} ${WORKON_HOME}
 
-WORKDIR /src/demo-integration
+WORKDIR /src/data-source-guide-example
 ADD . ./
 
 RUN bash docker/runtime-prepare.sh

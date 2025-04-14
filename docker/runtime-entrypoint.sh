@@ -12,5 +12,5 @@ export INVOKE_RUN_SHELL="/bin/sh"
 # Using PORT if defined (in Google Cloud Run), defaulting to 8000
 export PORT=${PORT:-8000}
 
-set -- poetry run invoke serve
+set -- poetry run serve
 exec "$@"

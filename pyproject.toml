@@ -2,21 +2,24 @@
 name = "data-source-guide-example"
 version = "0.1.0"
 description = ""
-authors = ["Andrew <dyusha.ru@gmail.com>"]
+authors = ["IOXIO Oy"]
 readme = "README.md"
+packages = [{include = "app", from="."}]
+
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 fastapi = "^0.115.12"
 uvicorn = "^0.34.0"
-
-
-[tool.poetry.group.dev.dependencies]
-invoke = "^2.2.0"
+typer = "^0.15.2"
 
 [tool.skjold]
 report_only = false
 sources = ["pyup", "gemnasium"]
+
+[tool.poetry.scripts]
+dev = "tasks.dev:cli"
+serve = "tasks.serve:cli"
 
 [build-system]
 requires = ["poetry-core"]

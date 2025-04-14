@@ -16,7 +16,7 @@ files.
 
 To install dependencies, first set up your environment with Poetry:
 
-````bash
+```bash
 # Using Poetry
 poetry install
 
@@ -24,17 +24,16 @@ poetry install
 
 To run the app locally, execute the following command:
 
-```bash
-poetry run invoke dev
-````
+poetry run dev
+```
 
 ### Docker
 
 Make sure [Docker](https://docs.docker.com/install/) is installed.
 
 ```shell
-docker build -t demo-integration .
-docker run -p 8000:8000 --rm -it demo-integration
+docker build -t data-source-guide-example .
+docker run -p 8000:8000 --rm -it data-source-guide-example
 ```
 
 ## License
