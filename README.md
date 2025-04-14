@@ -16,14 +16,17 @@ files.
 
 To install dependencies, first set up your environment with Poetry:
 
-```bash
+```shell
 # Using Poetry
+
 poetry install
+```
 
 ### Run the App
 
 To run the app locally, execute the following command:
 
+```shell
 poetry run dev
 ```
 
